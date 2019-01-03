@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			//创建一个name变量
+			var name = "全局";
+			
+			//创建一个fun()函数
+			function fun(){
+				console.log(this.name);     
+			}
+
+			function fun1(){
+				console.log(name);     
+			}
+			
+			//创建两个对象
+			var obj = {
+					name:"孙悟空",
+					sayName:fun
+			};
+			
+			var obj2 = {
+					name:"沙和尚",
+					sayName:fun1
+			};
+			
+			//我们希望调用obj.sayName()时可以输出obj的名字
+			//obj.sayName();
+			
+			obj.sayName();   //'悟空'
+			obj2.sayName();  // '全局'   =》直接是全局name
+  			
+			fun();  //"全局"   window.name
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

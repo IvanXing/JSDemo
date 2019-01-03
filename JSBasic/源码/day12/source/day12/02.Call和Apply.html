@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(a,b) {
+				console.log("a = "+a);
+				console.log("b = "+b);
+				//alert(this);
+			}
+			
+			var obj = {
+				name: "obj",
+				sayName:function(){
+					alert(this.name);
+				}
+			};
+
+			/*
+			 * call()和apply()
+			 * 	- 这两个方法都是函数对象的方法，需要通过函数对象来调用 => fun.call();  fun.apply();
+			 * 	- 当对函数调用call()和apply()都会调用函数执行
+			 * 	- 在调用call()和apply()可以将一个对象指定为第一个参数
+			 * 		此时这个对象将会成为函数执行时的this
+			 * 	- call()方法可以将实参在对象之后依次传递
+			 * 	- apply()方法需要将实参封装到一个数组中统一传递
+			 * 
+			 * 	- this的情况：
+			 * 		1.以函数形式调用时，this永远都是window
+			 * 		2.以方法的形式调用时，this是调用方法的对象
+			 * 		3.以构造函数的形式调用时，this是新创建的那个对象
+			 * 		4.使用call和apply调用时，this是指定的那个对象
+			 */
+			
+			//传入obj等，可以修改函数内的上下文对象this
+			//fun.call(obj,2,3);    //console.log(this)  函数形式调用，通过call调用，传入obj，打印出的不是window，是obj
+			fun.apply(obj,[2,3]);  //通过call，第二个第三个才是实参，第一个就是this，apply需要把实参放到数组中
+
+			
+
+			var obj2 = {
+				name: "obj2"
+			};
+
+			/*fun.apply();
+			fun.call();
+			fun();*/
+
+			//fun.call(obj);
+			//fun.apply(obj);
+
+			//fun();
+			
+			obj.sayName.apply(obj2);   //参数是谁this就是谁
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

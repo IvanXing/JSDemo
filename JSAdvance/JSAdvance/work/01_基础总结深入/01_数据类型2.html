@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01_相关问题</title>
+</head>
+<body>
+<!--
+1. undefined与null的区别?
+  * undefined代表定义了，但是未赋值
+  * null定义并赋值了, 只是值为null
+2. 什么时候给变量赋值为null呢?            =>   null是基本数据类型 but typeof null 返回'Object'
+  * 初始赋值, 表明将要赋值为对象
+  * 结束前, 让对象成为垃圾对象(被垃圾回收器回收)
+3. 严格区别  变量类型  与  数据类型?
+  * 数据的类型 分为
+    * 基本类型
+    * 对象类型
+  * 变量的类型(变量内存值的类型) 分为    变量本身没有类型，判断类型判断的是值的类型
+    * 基本类型: 保存就是基本类型的数据
+    * 引用类型: 保存的是地址值
+-->
+
+<script type="text/javascript">
+
+  // 实例: 实例对象
+  // 类型: 类型对象
+  function Person (name, age) {// 构造函数 -> 类型
+    this.name = name
+    this.age = age
+  }
+  var p = new Person('tom', 12) // 根据类型创建的实例对象
+
+  // Person('jack', 12)   也可以如此调用，但此时Person不是构造函数了，是不是构造函数是看如何调用的，不建议如此调用
+
+  // 1. undefined与null的区别?
+  var a
+  console.log(a)  // undefined
+  a = null
+  console.log(a) // null
+
+  //起始
+  var b = null  // 初始赋值为null, 表明将要赋值为  对象  对象  对象
+  //确定对象就赋值
+  b = ['atguigu', 12]
+  //最后
+  b = null // 让b指向的对象成为垃圾对象(被   垃圾回收器 （浏览器内核中）   回收)      没有引用指向就是一个垃圾对象，所以需要赋值为null
+  // b = 2
+
+  var e = {}  //e中存的是对象的地址  e在栈空间中，在堆空间创建一个对象，e保存的是这个对象的地址值
+  var c = function () {
+
+  }
+
+  console.log(typeof c) // 'function'
+
+</script>
+</body>
+</html>
