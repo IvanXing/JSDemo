@@ -10,18 +10,18 @@
   * 全称: Immediately-Invoked Function Expression
 2. 作用
   * 隐藏实现
-  * 不会污染外部(全局)命名空间
+  * 不会污染外部(全局)命名空间    => 不是全局变量
   * 用它来编码js模块
 -->
 <script type="text/javascript">
-  (function () { //匿名函数自调用
+  (function () { //匿名函数自调用   没有名字 不用命名
     var a = 3
     console.log(a + 3)
   })()
   var a = 4
   console.log(a)
 
-  ;(function () {
+  ;(function () {                //不写分号编译时会和conso.log连在一起报错
     var a = 1
     function test () {
       console.log(++a)

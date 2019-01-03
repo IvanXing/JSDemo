@@ -13,7 +13,7 @@
 2. 为什么要用对象?
   * 统一管理多个数据
 3. 对象的组成
-  * 属性: 属性名(字符串)和属性值(任意)组成
+  * 属性: 属性名(本质上都是字符串)和属性值(任意)组成
   * 方法: 一种特别的属性(属性值是函数)
 4. 如何访问对象内部数据?
   * .属性名: 编码简单, 有时不能用
@@ -21,9 +21,9 @@
 -->
 <script type="text/javascript">
   var p = {
-    name: 'Tom',
+    name: 'Tom',                           //属性名都是字符串，允许不写引号，实际还是字符串
     age: 12,
-    setName: function (name) {
+    setName: function (name) {             //属性值是函数
       this.name = name
     },
     setAge: function (age) {
@@ -31,9 +31,10 @@
     }
   }
 
+  //两种调用方法
   p.setName('Bob')
   p['setAge'](23)
-  console.log(p.name, p['age'])
+  console.log(p.name, p['age'])                  //p.setName  输出的是函数体 function(){}...
 
 
 

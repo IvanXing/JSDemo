@@ -15,6 +15,12 @@
   * p.test(): p
   * new test(): 新创建的对象
   * p.call(obj): obj
+
+
+  任何函数本质上都是通过某个对象来调用的
+  任何函数本质上都是通过某个对象来调用的
+  任何函数本质上都是通过某个对象来调用的
+  任何函数本质上都是通过某个对象来调用的
 -->
 
 <script type="text/javascript">
@@ -41,7 +47,7 @@
   p.setColor.call(obj, "black"); //this是谁? obj
 
   var test = p.setColor;
-  test(); //this是谁? window
+  test(); //this是谁? window  直接调用的
 
   function fun1() {
     function fun2() {
