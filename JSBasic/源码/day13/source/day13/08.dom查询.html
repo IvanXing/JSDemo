@@ -8,7 +8,7 @@
 		
 			window.onload = function(){
 				
-				//为id为btn01的按钮绑定一个单击响应函数
+				//为id为btn01的按钮绑定一个单击响应函数  #id  .class
 				var btn01 = document.getElementById("btn01");
 				btn01.onclick = function(){
 					//查找#bj节点
@@ -29,11 +29,12 @@
 					var lis = document.getElementsByTagName("li");
 					
 					//打印lis
-					//alert(lis.length);
+					console.log(lis)
+					console.log(lis.length);
 					
 					//变量lis
 					for(var i=0 ; i<lis.length ; i++){
-						alert(lis[i].innerHTML);
+						console.log(lis[i].innerHTML);
 					}
 				};
 				
@@ -44,7 +45,8 @@
 					//查找name=gender的所有节点
 					var inputs = document.getElementsByName("gender");
 					
-					//alert(inputs.length);
+					console.log(inputs)
+					console.log(inputs.length);
 					
 					for(var i=0 ; i<inputs.length ; i++){
 						/*
@@ -59,7 +61,7 @@
 						 * 		注意：class属性不能采用这种方式，
 						 * 			读取class属性时需要使用 元素.className
 						 */
-						alert(inputs[i].className);
+						console.log(inputs[i].value);
 					}
 				};
 				
