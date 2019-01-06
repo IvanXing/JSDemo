@@ -14,7 +14,7 @@
 				width: 500px;
 				margin: 50px auto;
 				padding: 10px;
-				background-color: greenyellow;
+				background-color: #e84e40;
 				/*设置文本居中*/
 				text-align: center;
 			}
@@ -36,7 +36,7 @@
 				 * 要切换图片就是要修改img标签的src属性
 				 */
 				
-				//获取img标签
+				//获取img标签   返回的是数组
 				var img = document.getElementsByTagName("img")[0];
 				
 				//创建一个数组，用来保存图片的路径
@@ -64,6 +64,7 @@
 						index = imgArr.length - 1;
 					}
 					
+					//读取img的src属性
 					img.src = imgArr[index];
 					
 					//当点击按钮以后，重新设置信息

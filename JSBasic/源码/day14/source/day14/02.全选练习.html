@@ -10,6 +10,7 @@
 		
 		//获取四个多选框items
 		var items = document.getElementsByName("items");
+		console.log('four checkbox', items)
 		//获取全选/全不选的多选框
 		var checkedAllBox = document.getElementById("checkedAllBox");
 		
@@ -122,6 +123,7 @@
 		 * 	- 当它选中时，其余的也选中，当它取消时其余的也取消
 		 * 
 		 * 在事件的响应函数中，响应函数是给谁绑定的this就是谁
+		    this就是checkedAllBox
 		 */
 		//为checkedAllBox绑定单击响应函数
 		checkedAllBox.onclick = function(){
