@@ -21,11 +21,11 @@
 				var box1 = document.getElementById("box1");
 				var btn01 = document.getElementById("btn01");
 				btn01.onclick = function(){
-					//读取box1的宽度
-					//alert(box1.style.width);
+					//读取box1的宽度  只能获取内联样式
+					//alert(box1.style.width);  
 					
 					/*
-					 * 获取元素的当前显示的样式
+					 * 获取元素的当前 显示 的样式
 					 * 	语法：元素.currentStyle.样式名
 					 * 它可以用来读取当前元素正在显示的样式
 					 * 	如果当前元素没有设置该样式，则获取它的默认值
