@@ -41,6 +41,8 @@
 				//当鼠标在被拖拽元素上按下时，开始拖拽  onmousedown
 				box1.onmousedown = function(event){
 					event = event || window.event;
+
+					//解决点右下角也跟着左上角动的问题
 					//div的偏移量 鼠标.clentX - 元素.offsetLeft
 					//div的偏移量 鼠标.clentY - 元素.offsetTop
 					var ol = event.clientX - box1.offsetLeft;
@@ -80,6 +82,7 @@
 		</script>
 	</head>
 	<body>
+		<!--兄弟不冒泡-->
 		<div id="box1"></div>
 		
 		<div id="box2"></div>

@@ -10,6 +10,7 @@
 				/*
 				 * 点击按钮以后弹出一个内容
 				 */
+
 				//获取按钮对象
 				var btn01 = document.getElementById("btn01");
 				
@@ -24,10 +25,12 @@
 					alert(1);
 				};*/
 				
-				//为btn01绑定第二个响应函数
+				//为btn01绑定第二个响应函数(第二个覆盖了第一个)
 				/*btn01.onclick = function(){
 					alert(2);
 				};*/
+
+
 				
 				/*
 				 * addEventListener()
@@ -53,6 +56,9 @@
 				btn01.addEventListener("click",function(){
 					alert(3);
 				},false);*/
+
+
+
 				
 				/*
 				 * attachEvent()
@@ -75,14 +81,16 @@
 				btn01.attachEvent("onclick",function(){
 					alert(3);
 				});*/
+
+
 				
-				/*btn01.addEventListener("click",function(){
-					alert(this);
-				},false);*/
+				// btn01.addEventListener("click",function(){
+				// 	console.log('addEventListener中的this', this);
+				// },false);
 				
-				/*btn01.attachEvent("onclick",function(){
-					alert(this);
-				});*/
+				// btn01.attachEvent("onclick",function(){
+				// 	console.log(this);
+				// });
 				
 				bind(btn01 , "click" , function(){
 					alert(this);
@@ -91,7 +99,7 @@
 				
 			};
 			
-			//定义一个函数，用来为指定元素绑定响应函数
+			//定义一个函数，用来为指定元素绑定响应函数   要兼容所有浏览器
 			/*
 			 * addEventListener()中的this，是绑定事件的对象
 			 * attachEvent()中的this，是window

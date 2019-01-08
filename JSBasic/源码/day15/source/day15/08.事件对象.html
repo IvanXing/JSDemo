@@ -38,9 +38,10 @@
 		 * 		在事件对象中封装了当前事件相关的一切信息，比如：鼠标的坐标  键盘哪个按键被按下  鼠标滚轮滚动的方向。。。
 		 */
 		areaDiv.onmousemove = function(event){
-			
+			console.log('event对象', event)
+			console.log('win8 以下存在window中', window.event)
 			/*
-			 * 在IE8中，响应函数被处罚时，浏览器不会传递事件对象，
+			 * 在IE8中，响应函数被触发时，浏览器不会传递事件对象，
 			 * 	在IE8及以下的浏览器中，是将事件对象作为window对象的属性保存的
 			 */
 			/*if(!event){
