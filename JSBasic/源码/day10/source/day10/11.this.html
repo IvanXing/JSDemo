@@ -11,7 +11,7 @@
 			 * 	这个对象我们称为函数执行的 上下文对象，
 			 * 	根据函数的调用方式的不同，this会指向不同的对象
 			 * 		1.以函数的形式调用时，this永远都是window   fun();
-			 * 		2.以方法的形式调用时，this就是调用方法的那个对象   obj.sayName();
+			 * 		2.以方法的形式调用时，this就是调用方法的那个对象obj   obj.sayName();
 			 */
 			
 			function fun(){
@@ -40,7 +40,7 @@
 			//以函数形式调用，this是window    this.name  ===>  window.name
 			fun();    //全局的name属性   this就是window
 			
-			//以方法的形式调用，this是调用方法的对象
+			//以方法的形式调用，this是调用方法的对象  this就是obj和obj2
 			obj.sayName();
 			obj2.sayName();
 			
