@@ -25,7 +25,7 @@
 			 * this的情况：
 			 * 	1.当以函数的形式调用时，this是window
 			 * 	2.当以方法的形式调用时，谁调用方法this就是谁
-			 * 	3.当以构造函数的形式调用时，this就是新创建的那个对象
+			 * 	3.当以构造函数的形式调用时，this就是新创建的那个对象（构造函数的返回值）
 			 * 
 			 */
 			function Person(name , age , gender){
@@ -40,6 +40,9 @@
 			function Dog(){
 				
 			}
+
+			// var dog = Dog()
+			// console.log(dog)   //undefined 没有返回值
 			
 			var per = new Person("孙悟空",18,"男");
 			var per2 = new Person("玉兔精",16,"女");

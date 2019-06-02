@@ -20,12 +20,12 @@
 
 			/*
 			 * call()和apply()
-			 * 	- 这两个方法都是函数对象的方法，需要通过函数对象来调用 => fun.call();  fun.apply();
+			 * 	- 这两个方法都是函数对象的方法，需要通过函数对象来调用 => fun.call();  fun.apply();  不是fun().call
 			 * 	- 当对函数调用call()和apply()都会调用函数执行
 			 * 	- 在调用call()和apply()可以将一个对象指定为第一个参数
 			 * 		此时这个对象将会成为函数执行时的this
-			 * 	- call()方法可以将实参在对象之后依次传递
-			 * 	- apply()方法需要将实参封装到一个数组中统一传递
+			 * 	- call()方法可以将实参在对象之后依次传递  xxx.call(obj, a, b)
+			 * 	- apply()方法需要将实参封装到一个数组中统一传递 xxx.apply(obj, [a, b])
 			 * 
 			 * 	- this的情况：
 			 * 		1.以函数形式调用时，this永远都是window
@@ -48,8 +48,9 @@
 			fun.call();
 			fun();*/
 
-			//fun.call(obj);
+			//fun.call(obj);   obj是函数的this  传谁谁是this  指定this
 			//fun.apply(obj);
+			// fun()  this是window
 
 			//fun();
 			
