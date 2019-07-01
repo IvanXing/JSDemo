@@ -32,11 +32,11 @@
   // typeof返回数据类型的字符串表达
   var a
   console.log(a, typeof a, typeof a==='undefined',a===undefined )  // undefined 'undefined' true true
-  console.log(undefined==='undefined')  //
+  console.log(undefined==='undefined')  //false  值是undefined 类型是'undefined'
   a = 4
-  console.log(typeof a==='number')
+  console.log(typeof a==='number')  //true
   a = 'atguigu'
-  console.log(typeof a==='string')
+  console.log(typeof a==='string')  //true
   a = true
   console.log(typeof a==='boolean')
   a = null
@@ -65,18 +65,6 @@
   console.log(typeof b1.b2[2]==='function')
   b1.b2[2](4)   //后面加() => 调用函数
   console.log(b1.b3()())    //输出了xfzhang
-
-
-
-  /*var obj = {
-    name: 'Tom',
-    age: 12
-  }
-  function test () {
-    var a = 3
-  }
-  var arr = [3, 'abc']
-  arr[1]*/
 
 </script>
 </body>
