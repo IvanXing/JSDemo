@@ -17,12 +17,15 @@
   // 每个函数都有一个prototype属性, 它默认指向一个Object空对象(即称为: 原型对象)
   // 原型上的方法是给实例对象使用的
   console.log(Date.prototype, typeof Date.prototype)  // object
-  function Fun () {//alt + shift +r(重命名rename)
+  function Fun () {
 
   }
   console.log(Fun.prototype)  // 默认指向一个Object空对象(没有我们的属性)
 
   // 原型对象中有一个属性constructor(引用变量属性), 它指向函数对象
+
+  // ******构造函数和原型对象是相互引用关系******
+
   console.log(Date.prototype.constructor===Date)   //true
   console.log(Fun.prototype.constructor===Fun)    //true
 
@@ -32,7 +35,7 @@
   }
   //原型方法给实例对象使用
   var fun = new Fun()
-  fun.test()
+  fun.test()     //test()
 
 
 
