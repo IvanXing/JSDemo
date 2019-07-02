@@ -19,6 +19,7 @@
   /*
   面试题 : 输出 undefined
    */
+  //  var a  console.log(a)  a=4
   var a = 3
   function fn () {
     console.log(a)
@@ -26,7 +27,7 @@
   }
   fn()
 
-  console.log(b) //undefined  变量提升
+  console.log(b) //undefined  变量提升  b的定义提前 值为undefined
   fn2() //可调用  函数提升
   // fn3() //不能  变量提升
 

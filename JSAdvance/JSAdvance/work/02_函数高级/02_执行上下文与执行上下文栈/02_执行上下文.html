@@ -37,6 +37,23 @@
   }
   console.log(a1)
 
+  // 函数执行上下文
+
+  function fn(a1){
+    console.log(a1)
+    console.log(a2)
+    a3()
+    console.log(this)
+    console.log(argument)  //伪数组
+
+    var a2 = 3
+    function a3() {
+      console.log('a3()')
+    }
+  }
+  fn(2, 3)
+
+
 </script>
 </body>
 </html>
