@@ -24,14 +24,14 @@
     function fn2 () { //执行函数定义就会产生闭包(不用调用内部函数)
       console.log(a)
     }
-    // fn2()
+    fn2()  //执行fn2 产生a：2闭包
   }
-  fn1()
+  fn1()  //执行外部函数时，fn2也声明了，fn2中的a是外部的
 
   function fun1() {
     var a = 3
-    var fun2 = function () {
-      console.log(a)
+    var fun2 = function () {   //此种定义不产生闭包  var fun2;
+      console.log(a) 
     }
   }
   fun1()

@@ -15,7 +15,7 @@
   function fn1() {
     var a = 2
     function fn2() {
-      a++
+      a++   //用到了外部的变量
       console.log(a)
     }
     return fn2
@@ -27,7 +27,7 @@
   // 2. 将函数作为实参传递给另一个函数调用
   function showDelay(msg, time) {
     setTimeout(function () {
-      alert(msg)
+      alert(msg)     // 1.外部函数  2.内部函数  3.内部函数引用了外部函数的数据
     }, time)
   }
   showDelay('atguigu', 2000)
