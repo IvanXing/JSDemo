@@ -30,7 +30,7 @@
   // 2. 内存泄露
     // 意外的全局变量
   function fn() {
-    a = new Array(10000000)
+    a = new Array(10000000)    //用var定义变量 不要用 a=xxx 全局
     console.log(a)
   }
   fn()

@@ -7,7 +7,7 @@
 <body>
 
 <script type="text/javascript">
-  //代码片段一
+  //代码片段一（不是闭包，函数嵌套，但是内部函数没有用外部函数的变量）
   var name = "The Window";
   var object = {
     name : "My Object",
@@ -20,12 +20,12 @@
   alert(object.getNameFunc()());  //?  the window
 
 
-  //代码片段二
+  //代码片段二（是闭包，函数嵌套，内部函数 用了 外部函数的变量 MyOb）
   var name2 = "The Window";
   var object2 = {
     name2 : "My Object",
     getNameFunc : function(){
-      var that = this;
+      var that = this;   //调用getNameFunc的this
       return function(){
         return that.name2;
       };
